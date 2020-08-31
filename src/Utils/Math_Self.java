@@ -1,6 +1,6 @@
 package Utils;
 
-public class Math {
+public class Math_Self {
     public static double sqrt(double c){
         //牛顿迭代法
         if(c<0) return Double.NaN;

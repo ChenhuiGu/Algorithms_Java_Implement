@@ -1,17 +1,21 @@
 package Algorithm4th.Sort;
 
 public class Sorted {
+    //临时数组
+    private static Comparable [] aux;
     public static void main(String[] args) {
-        Integer[] arr = {12,4,33,15,7};
+//        Integer[] arr = {12,4,33,15,7};
 //        select(arr);
-//        insert(arr);
-        shell(arr);
+//        insert(arr)；
+//        shell(arr);
+        Integer[] arr = {4,7,12,15,3,8,10};
+        merge(arr,0,3,6);
         show(arr);
     }
-    private static boolean less(Comparable v, Comparable w){
+    public static boolean less(Comparable v, Comparable w){
         return v.compareTo(w) < 0;
     }
-    private static void exec(Comparable[] a,int i,int j){
+    public static void exec(Comparable[] a,int i,int j){
         Comparable t = a[i];
         a[i] = a[j];
         a[j] = t;
@@ -53,6 +57,22 @@ public class Sorted {
                 }
             }
             h = h/3;
+        }
+    }
+    public static void merge(Comparable[] a,int lo,int mid,int hi){
+        //合并a[lo,mid]和a[mid,hi],原地归并
+        int i = lo;
+        int j = mid + 1;
+        //数组初始化，确定长度
+        aux = new Comparable[a.length];
+        for(int k=lo;k<hi+1;k++){
+            aux[k] = a[k];//aux储存临时数据
+        }
+        for(int k=lo;k<hi+1;k++){
+            if(i>mid){a[k]=aux[j++];}//左边数组合并完毕
+            else if(j>hi){a[k]=aux[i++];}//左边数组合并完毕
+            else if(less(aux[j],aux[i])){a[k]=aux[j++];}//左边数组元素小
+            else {a[k]=aux[i++];}
         }
     }
 }
