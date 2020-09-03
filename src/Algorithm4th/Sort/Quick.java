@@ -1,36 +1,39 @@
 package Algorithm4th.Sort;
-
 import Utils.StdRandom;
-
-import java.util.Random;
-
+import java.util.Arrays;
 import static Algorithm4th.Sort.Sorted.exec;
 import static Algorithm4th.Sort.Sorted.less;
 
 public class Quick {
-    public static void sort(Comparable[] a){
-        //乱序，随机交换元素
+    public void sort(Comparable[] a){
+        //乱序，随机交换元素，消除对输入的依赖
         StdRandom.shuffle(a);
         sort(a,0,a.length-1);
     }
-    public static void sort(Comparable[] a,int lo,int hi){
-        //方法重载
+    public void sort(Comparable[] a,int lo,int hi){
+        //小数组采用插入排序
         if(lo>=hi) return;
+//        int M = 6;
+//        if(hi<=lo+M){
+//            Insert I = new Insert();
+//            I.insert(Arrays.copyOfRange(a,lo,hi));
+//            return;
+//        }
         int i = partition(a,lo,hi);
         //递归
-        sort(a,lo,i);
-        sort(a,i,hi);
+        sort(a,lo,i-1);
+        sort(a,i+1,hi);
     }
-    public static int partition(Comparable[] a,int lo,int hi){
-        int i=lo,j=hi;
+    public int partition(Comparable[] a,int lo,int hi){
+        int i=lo,j=hi+1;
         Comparable v = a[lo];
         while(true){
-            while(less(a[i++],v)){
+            while(less(a[++i],v)){
                 //小于v
-                if(i>hi) break;
+                if(i==hi) break;
             }
-            while(less(v,a[j++])){
-                if(j<lo) break;
+            while(less(v,a[--j])){
+                if(j==lo) break;
             }
             if(i>=j) break;
             exec(a,i,j);
