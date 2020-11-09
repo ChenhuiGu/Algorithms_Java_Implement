@@ -3,7 +3,8 @@ import Utils.IOApi;
 import Utils.Queue1992;
 
 
-public class SequentialSearch<Key, Value> {
+public class
+SequentialSearch<Key, Value> {
     private Node first;
     private int N;
     //无序链表
