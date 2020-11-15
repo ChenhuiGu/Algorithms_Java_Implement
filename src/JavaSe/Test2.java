@@ -45,12 +45,8 @@ public class Test2 {
 }
 
 class Person {
-    private int age;
+    protected int age;
     private String name;
-//    public Person(String name,int age){
-//        this.age = age;
-//        this.name = name;
-//    }
     public void setName(String name) {
         this.name = name;
     }
@@ -69,8 +65,10 @@ class Person {
 class Student extends Person{
     private int score;
 
+
     public void setScore(int score) {
         this.score = score;
+        setAge(12);
     }
 
     public int getScore() {
