@@ -1,23 +1,12 @@
+package Algorithm4th.Sort;
 import java.util.Iterator;
-import Utils.StdIn;
-public class LinkListTest {
-    public static void main(String[] args){
-//        Stack<String> s = new Stack<String>();
-//        Queue<String> q = new Queue<String>();
-        ResizingArrayStack<String> r = new ResizingArrayStack<String>();
-        String str = "to be or not to - be - - that - - - is";
-        String[] words = str.split(" ");
-        for (String item:words
-             ) {
-            if(!item.equals("-"))
-                r.push(item);
-            else if (!r.isEmpty()) System.out.print(r.pop() + " ");
-        }
 
-    }
-}
-
-class ResizingArrayStack<Item> implements Iterable<Item>{
+/**
+ * 数组实现栈
+ * 可迭代
+ * @param <Item>
+ */
+public class ResizingArrayStack<Item> implements Iterable<Item>{
     private Item[] a = (Item[]) new Object[1];
     private int N = 0;
     public boolean isEmpty(){return N==0;}

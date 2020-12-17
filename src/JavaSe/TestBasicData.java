@@ -2,7 +2,7 @@ package JavaSe;
 /*
 关于数据类型、控制流程、数组的测试
 * */
-public class Test1 {
+public class TestBasicData {
     public static void main(String[] args){
         int a = 3;
         int b = 4;
