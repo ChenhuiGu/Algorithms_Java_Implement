@@ -1,8 +1,11 @@
 package JavaSe;
 
+import com.sun.source.tree.SynchronizedTree;
+
 public class Test4 {
     public static void main(String[] args) {
         Account a = new Account();
+//        Account b = new Account();
         User weixin = new User(a,2000);
         User zhifubao = new User(a,2000);
         Thread t1 = new Thread(weixin,"weixin");
@@ -16,10 +19,16 @@ class Account {
     public int Money = 3000;
     public void getMoney(int m) {
         String name = Thread.currentThread().getName();
-        System.out.println("账户余额" + Money);
-        System.out.println(name + "取款" + m);
-        Money = Money-m;
-        System.out.println("账户余额" + (Money));
+        synchronized(this) {
+            if (Money > m) {
+                System.out.println("账户余额" + Money);
+                System.out.println(name + "取款" + m);
+                Money = Money - m;
+                System.out.println("账户余额" + (Money));
+            } else {
+                System.out.println("账户余额" + (Money) + ",余额不足");
+            }
+        }
     }
 }
 
