@@ -1,23 +1,15 @@
 package Algorithm4th.Heap;
-/*
-有序数组和无序数组构建优先队列
-利用有序堆构建优先队列
-插入元素
-删除最大（最小）元素
- */
-public class MaxPQ<Key extends Comparable<Key>> {
+
+public class MaxPriorityQueue<Key extends Comparable<Key>> {
     private Key[] pq;
     private int N=0;
-    MaxPQ(){}
-    MaxPQ(int max){
+    public MaxPriorityQueue(int max){
         pq = (Key[]) new Comparable[max+1];
     }
-    MaxPQ(Key[] a){}
     public void insert(Key v){
         //自增、赋值
         pq[++N] = v;
         swim(N);
-
     }
     public Key max(){
         return pq[1];
