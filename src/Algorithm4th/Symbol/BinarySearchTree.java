@@ -1,5 +1,4 @@
 package Algorithm4th.Symbol;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -143,6 +142,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> implements Sea
             if (x.left == null) return x.right;
             // 右子树为空
             if (x.right == null) return x.left;
+            // 两个子树都存在，将右子树的最小值替换该节点
             Node t = x;
             x = min(x.right);
             //保证顺序，否则左子树会加到右子树上
