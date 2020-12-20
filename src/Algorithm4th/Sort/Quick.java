@@ -1,9 +1,9 @@
 package Algorithm4th.Sort;
+import Algorithm4th.utils.Common;
 import Utils.StdRandom;
-import java.util.Arrays;
 
 
-public class Quick extends Common{
+public class Quick extends Common {
     public void sort(Comparable[] a){
         //乱序，随机交换元素，消除对输入的依赖
         StdRandom.shuffle(a);
@@ -25,13 +25,12 @@ public class Quick extends Common{
     }
     public int partition(Comparable[] a,int lo,int hi){
         int i=lo,j=hi+1;
-        Comparable v = a[lo];
         while(true){
-            while(less(a[++i],v)){
+            while(less(a,++i,lo)){
                 //小于v
                 if(i==hi) break;
             }
-            while(less(v,a[--j])){
+            while(less(a,lo,--j)){
                 if(j==lo) break;
             }
             if(i>=j) break;

@@ -1,4 +1,4 @@
-package Algorithm4th.Sort;
+package Algorithm4th.Heap;
 /*
 有序数组和无序数组构建优先队列
 利用有序堆构建优先队列

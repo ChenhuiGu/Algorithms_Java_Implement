@@ -1,6 +1,8 @@
 package Algorithm4th.Sort;
 
-public class Merge extends Common{
+import Algorithm4th.utils.Common;
+
+public class Merge extends Common {
     private Comparable [] aux;
     public void merge(Comparable[] a,int lo,int mid,int hi){
         //合并a[lo,mid]和a[mid,hi],原地归并
@@ -12,7 +14,7 @@ public class Merge extends Common{
         for(int k=lo;k<hi+1;k++){
             if(i>mid){a[k]=aux[j++];}//左边数组合并完毕
         else if(j>hi){a[k]=aux[i++];}//左边数组合并完毕
-            else if(less(aux[j],aux[i])){a[k]=aux[j++];}//左边数组元素小
+            else if(less(aux,j,i)){a[k]=aux[j++];}//左边数组元素小
             else {a[k]=aux[i++];}
         }
     }
