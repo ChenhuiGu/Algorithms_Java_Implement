@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class SingleLinkListTest {
 
-    @Test
+
     public void add() {
         SingleLinkList<Integer> singleLinkList = new SingleLinkList<>();
         singleLinkList.add(12);
