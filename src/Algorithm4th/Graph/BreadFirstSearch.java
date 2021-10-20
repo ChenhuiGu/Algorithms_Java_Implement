@@ -9,7 +9,8 @@ public class BreadFirstSearch {
 
     public BreadFirstSearch(Graph G, int s) {
         this.marked = new boolean[G.V()];
-        this.count = 0;
+        this.waitSearch = new LinkedList<Integer>();
+        this.count = 1;
         bfs(G,s);
     }
 
@@ -18,10 +19,13 @@ public class BreadFirstSearch {
         waitSearch.offer(v);
         while (!waitSearch.isEmpty()){
             Integer d = waitSearch.pop();
-            for (Integer w : G.adj(v)) {
-                waitSearch.offer(w);
-                marked[w] = true;
-                count++;
+            for (Integer w : G.adj(d)) {
+                if(!marked[w]){
+                    waitSearch.offer(w);
+                    marked[w] = true;
+                    count++;
+                }
+
             }
         }
 

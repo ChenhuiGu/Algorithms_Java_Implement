@@ -1,9 +1,7 @@
 package Algorithm4th.Graph;
-
 import java.util.LinkedList;
 
 public class Graph {
-    //限定图的大小
     private final int V;
     private int E;
     // 邻接表,一组由队列构成的数组

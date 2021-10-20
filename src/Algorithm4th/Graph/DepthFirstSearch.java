@@ -1,7 +1,5 @@
 package Algorithm4th.Graph;
 
-import java.util.LinkedList;
-
 public class DepthFirstSearch {
     private boolean[] marked;
     private int count;

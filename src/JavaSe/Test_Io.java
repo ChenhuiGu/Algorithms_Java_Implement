@@ -11,7 +11,6 @@ public class Test_Io {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>();
         Deque<Integer> de = new LinkedList<>();
-        de.
     }
     public static void testFileinputStream(){
         try {
