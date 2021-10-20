@@ -9,10 +9,10 @@ public class Common<T extends Comparable<T>> {
         a[i] = a[j];
         a[j] = t;
     }
-    protected  void show(T[] a){
-        for (T i:a) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-    }
+    //protected static void show(T[] a){
+    //    for (T i:a) {
+    //        System.out.print(i + " ");
+    //    }
+    //    System.out.println();
+    //}
 }

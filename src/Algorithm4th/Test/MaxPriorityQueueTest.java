@@ -1,9 +1,8 @@
 package Algorithm4th.Test;
 
 import Algorithm4th.Heap.MaxPriorityQueue;
-import org.junit.Test;
-
 import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class MaxPriorityQueueTest {
 

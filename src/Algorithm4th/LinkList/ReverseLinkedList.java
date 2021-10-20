@@ -1,4 +1,4 @@
-package Leetcode.LinkList;
+package Algorithm4th.LinkList;
 import Utils.ListNode;
 
 /**

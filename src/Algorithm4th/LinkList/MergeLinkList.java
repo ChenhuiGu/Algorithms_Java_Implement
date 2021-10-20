@@ -1,4 +1,4 @@
-package Leetcode.LinkList;
+package Algorithm4th.LinkList;
 import Utils.ListNode;
 /**
  *合并2个有序链表成为新的有序链表

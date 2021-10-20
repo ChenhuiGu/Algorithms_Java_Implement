@@ -3,7 +3,8 @@
 .idea/
 # Log file
 *.log
-
+out/
+source/
 # BlueJ files
 *.ctxt
 
