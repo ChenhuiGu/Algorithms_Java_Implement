@@ -12,7 +12,7 @@ public class Graph {
         E = 0;
         adj = (LinkedList<Integer>[]) new LinkedList[V];
         for (int i = 0; i < V; i++) {
-            adj[i] = new LinkedList<Integer>();
+            adj[i] = new LinkedList<>();
         }
     }
 
