@@ -1,4 +1,4 @@
-package Algorithm4th.Symbol;
+package Algorithm4th.BinaryTree;
 import Utils.IOApi;
 import Utils.Queue1992;
 

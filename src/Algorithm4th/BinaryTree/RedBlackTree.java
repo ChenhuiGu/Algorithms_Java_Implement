@@ -1,4 +1,4 @@
-package Algorithm4th.Symbol;
+package Algorithm4th.BinaryTree;
 
 public class RedBlackTree<Key extends Comparable<Key>,Value> {
     private static final boolean RED = true;

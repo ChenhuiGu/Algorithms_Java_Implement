@@ -1,6 +1,6 @@
 package Algorithm4th.Test;
-import Algorithm4th.Symbol.BinarySearchTree;
-import Algorithm4th.Symbol.SearchTree;
+import Algorithm4th.BinaryTree.BinarySearchTree;
+import Algorithm4th.BinaryTree.SearchTree;
 import org.junit.Test;
 import java.util.Queue;
 

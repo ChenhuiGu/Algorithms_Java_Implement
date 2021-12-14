@@ -1,6 +1,6 @@
 package Algorithm4th.Test;
 
-import Algorithm4th.Symbol.RedBlackTree;
+import Algorithm4th.BinaryTree.RedBlackTree;
 
 public class RedBlackTreeTest {
     public static void main(String[] args) {
