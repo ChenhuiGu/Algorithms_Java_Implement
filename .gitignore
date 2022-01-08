@@ -7,10 +7,10 @@ out/
 source/
 # BlueJ files
 *.ctxt
-
+*.iml
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
+target/
 # Package Files #
 *.jar
 *.war
