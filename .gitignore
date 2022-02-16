@@ -5,6 +5,7 @@
 *.log
 out/
 source/
+data/
 # BlueJ files
 *.ctxt
 *.iml
