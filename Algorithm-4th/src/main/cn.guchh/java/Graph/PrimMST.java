@@ -1,8 +1,6 @@
 package Graph;
 import utils.IndexMinPQ;
 
-import java.util.LinkedList;
-
 public class PrimMST {
     private Edge[] edgeTo;
     private double[] distTo;
